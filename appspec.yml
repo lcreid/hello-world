@@ -8,12 +8,14 @@ permissions:
     owner: ubuntu
     group: www-data
     mode: 640
-    type: file
+    type:
+      - file
   - object: /var/www/hello-world.weenhanceit.com/html
     owner: ubuntu
     group: www-data
     mode: 750
-    type: directory
+    type:
+      - directory
 hooks:
   AfterInstall:
     - location: scripts/reload-web-server-config
